@@ -39,3 +39,37 @@ Crie uma classe Animal com um atributo privado energia e um método comer() que 
 
 Exercício 5:
 Crie uma classe abstrata Funcionario com atributos encapsulados nome, salario e um método abstrato calcularBonus(). Crie subclasses Gerente e Operario. O Gerente tem um bônus de 10% sobre o salário, e o Operario tem um bônus de 5%. Crie uma função calcularSalarioComBonus() que aceite um array de funcionários e calcule o salário final, aplicando o bônus específico de cada um, usando polimorfismo.
+
+
+## Trilha 4:
+
+1 - Produtos
+Crie uma interface chamada Produto que tenha as propriedades id (número), nome (string) e preco (número).
+Em seguida, crie uma classe ItemLoja que implemente essa interface.
+No construtor da classe, atribua valores às propriedades id, nome e preco.
+
+2 - Documentos
+Crie uma interface chamada Documento com as propriedades titulo (string) e conteudo (string).
+Implemente essa interface em uma classe chamada Texto e crie um método exibir() que retorna uma string com o título e o conteúdo formatados da seguinte forma: "Título: [titulo], Conteúdo: [conteudo]".
+
+3 - Cadastro e Busca de Produtos em uma Loja:
+Crie uma interface chamada ProdutoLoja com as propriedades codigo (número) e nome (string).
+Crie uma classe Loja que tenha um array de produtos que implemente a interface ProdutoLoja.
+Implemente um método buscarProdutoPorCodigo(codigo: number): ProdutoLoja | undefined que recebe um código de produto e retorna o produto correspondente, caso exista; caso contrário, retorne undefined
+
+Dica: pesquisar sobre o método find https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+
+4 - Sistema de Biblioteca com Checagem de Disponibilidade:
+Crie uma interface Livro com as propriedades titulo (string), autor (string) e disponivel (boolean).
+Crie uma classe Biblioteca que contenha um array de livros que implementem Livro.
+Implemente um método buscarLivrosDisponiveis() que retorne um array com todos os livros cuja propriedade disponivel seja true. 
+
+Dica: pesquisar pelo método filter https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+5 - Gestão de Bibliotecas com Filtro Avançado de Autores e Livros Disponíveis:
+Crie uma interface LivroBiblioteca com as propriedades titulo (string), autor (string), genero (string) e disponivel (boolean).
+Crie uma classe BibliotecaGestao que contenha um array de livros implementando a interface LivroBiblioteca.
+Implemente os seguintes métodos:
+filtrarPorGenero(genero: string): LivroBiblioteca[] - retorna um array de livros que pertencem ao gênero especificado.
+buscarPorAutor(autor: string): LivroBiblioteca[] - retorna todos os livros escritos por um autor específico.
+obterLivrosDisponiveisOrdenados(): LivroBiblioteca[] - retorna uma lista de todos os livros disponíveis, ordenada alfabeticamente pelo título.
