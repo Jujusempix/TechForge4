@@ -1,8 +1,3 @@
-/*Implemente os seguintes métodos:
-filtrarPorGenero(genero: string): LivroBiblioteca[] - retorna um array de livros que pertencem ao gênero especificado.
-buscarPorAutor(autor: string): LivroBiblioteca[] - retorna todos os livros escritos por um autor específico.
-obterLivrosDisponiveisOrdenados(): LivroBiblioteca[] - retorna uma lista de todos os livros disponíveis, ordenada alfabeticamente pelo título.*/
-
 interface LivroBiblioteca{
   titulo: string;
   autor: string;
