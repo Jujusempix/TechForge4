@@ -73,3 +73,40 @@ Implemente os seguintes métodos:
 filtrarPorGenero(genero: string): LivroBiblioteca[] - retorna um array de livros que pertencem ao gênero especificado.
 buscarPorAutor(autor: string): LivroBiblioteca[] - retorna todos os livros escritos por um autor específico.
 obterLivrosDisponiveisOrdenados(): LivroBiblioteca[] - retorna uma lista de todos os livros disponíveis, ordenada alfabeticamente pelo título.
+
+
+## Trilha 5:
+
+1. Sistema de Tarefas e Projetos
+Implemente uma classe abstrata TaskManager que represente um sistema de gerenciamento de tarefas. Ela deve ter um método abstrato addTask(task: string): void e outro listTasks(): string[].
+
+Crie duas subclasses: Project e DailyTasks.
+Project deve permitir adicionar tarefas específicas de um projeto e retornar uma lista de todas as tarefas do projeto.
+DailyTasks deve permitir adicionar tarefas diárias e listar as tarefas adicionadas.
+Cada tarefa deve ser única; implemente uma lógica que evite tarefas duplicadas.
+Dica: para diferenciar as tarefas e dizer se ela são de projetos ou diárias, utilizem objetos
+
+
+2. Inventário de Itens
+Crie uma classe abstrata Inventory que gerencie um inventário de itens. Ela deve ter métodos abstratos addItem(item: string, quantity: number): void, removeItem(item: string): void e getInventory(): Record<string, number>. Dica: ver tipagem com Record para objetos com TypeScript
+
+Crie duas subclasses WarehouseInventory e StoreInventory.
+WarehouseInventory deve ter a capacidade de armazenar quantidades grandes e controlar os itens de forma genérica.
+StoreInventory deve ter um limite de quantidade por item (máximo 10 unidades) e impedir que itens ultrapassem esse limite.
+Ambos os inventários devem retornar uma lista de itens com suas quantidades disponíveis.
+
+
+3. Gerenciador de Favoritos
+Implemente uma classe abstrata FavoriteManager que gerencia listas de itens favoritos. Ela deve ter métodos abstratos addFavorite(item: string): void e getFavorites(): string[].
+
+Crie duas subclasses: MoviesFavoriteManager e BooksFavoriteManager.
+MoviesFavoriteManager deve gerenciar uma lista de filmes favoritos sem itens duplicados e retornar a lista em ordem alfabética. Dica: pesquisar pelo método sort para arrays em JavaScript
+BooksFavoriteManager deve gerenciar uma lista de livros favoritos, mas sempre que um novo item é adicionado, ele deve ser inserido no início da lista. 
+
+
+4. Sistema de Votação
+Crie uma classe abstrata VoteSystem que gerencie votos em uma competição. Ela deve ter métodos abstratos voteFor(candidate: string): void e getResults(): object.
+
+Crie duas subclasses: Election e Poll.
+Election deve permitir adicionar votos para um candidato específico e retornar o total de votos por candidato em um objeto.
+Poll deve retornar uma lista dos candidatos em ordem de votos (do mais votado para o menos votado).
