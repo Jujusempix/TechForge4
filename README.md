@@ -110,3 +110,30 @@ Crie uma classe abstrata VoteSystem que gerencie votos em uma competição. Ela 
 Crie duas subclasses: Election e Poll.
 Election deve permitir adicionar votos para um candidato específico e retornar o total de votos por candidato em um objeto.
 Poll deve retornar uma lista dos candidatos em ordem de votos (do mais votado para o menos votado).
+
+## Trilha 6
+
+1. Separação de Responsabilidades em Classe de Pedido
+Crie uma classe Order que gerencie informações de um pedido, como items, totalPrice, paymentStatus e shippingStatus.
+
+Inicialmente, faça com que a classe Order seja responsável por adicionar itens, calcular o preço total, processar o pagamento e atualizar o status do envio.
+Depois, refatore o código para criar três classes separadas (Cart, Payment, Shipping) e faça com que Order dependa dessas classes para realizar suas funções.
+Objetivo: Melhorar a coesão separando responsabilidades e reduzir o acoplamento.
+
+
+
+2. Gerenciamento de Usuários e Notificações
+Implemente uma classe UserManager que gerencie a criação de usuários e envie notificações por email.
+
+Inicialmente, coloque toda a lógica de criação e notificação na classe UserManager.
+Em seguida, refatore para dividir a responsabilidade de envio de notificação em uma classe EmailNotification.
+Objetivo: Aumentar a coesão separando a lógica de notificação e reduzir o acoplamento ao injetar EmailNotification na UserManager.
+
+
+
+3. Sistema de Envio de Emails e Validação de Contato
+Crie uma classe EmailSender que envie emails para contatos e valide as informações de contato.
+
+Implemente a validação e o envio de email na mesma classe.
+Em seguida, separe a validação em uma classe ContactValidator e injete-a em EmailSender.
+Objetivo: Melhorar a coesão separando a lógica de validação e reduzir o acoplamento.
